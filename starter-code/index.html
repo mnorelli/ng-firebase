@@ -12,9 +12,15 @@
   <body ng-controller="FoodCtrl">
     <h1>ToEatly</h1>
       <b>Name</b> | <b>Yumminess</b>
-      <!-- food index here -->
+      <div class="food" ng-repeat="food in foods">
+          <b>Name:</b> {{food.name}} | <b>Yumminess:</b> {{food.yumminess}}
+      </div>
       <h3>Add a New Food</h3>
-      <!-- new food form here -->
+      <form ng-submit="addFood()">
+          <input placeholder="name" ng-model="food.name">
+          <input yuminess="yuminess" ng-model="food.yuminess">
+          <button type="submit">Eat me!</button>
+      </form>
     </div>
   </body>
 </html>
